@@ -1,0 +1,82 @@
+@import url("http://at.alicdn.com/t/font_950361_ler4e80sjmh.css");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #2d2c41;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 360px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.accordion > li .link {
+  cursor: pointer;
+  padding: 15px 15px 15px 15px;
+  color: #4D4D4D;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 1px solid #CCC;
+  position: relative;
+}
+
+.accordion > li .link i {
+  color: #595959;
+  font-size: 18px;
+}
+
+.accordion > li .link i.icon-guanli {
+  margin-right: 12px;
+}
+
+.accordion > li .link i.icon-xiala- {
+  position: absolute;
+  right: 15px;
+  transition: transform 0.8s;
+}
+
+.accordion > li .link.open {
+  color: #b63b4d;
+}
+
+.accordion > li .link.open i {
+  color: #b63b4d;
+}
+
+.accordion > li .link.open .icon-xiala- {
+  transform: rotate(180deg);
+}
+
+.accordion > li:last-child .link {
+  border-bottom: none;
+}
+
+.accordion .submenu {
+  display: none;
+  background: #444359;
+  font-size: 14px;
+}
+
+.accordion .submenu li {
+  border-bottom: 1px solid #4b4a5e;
+}
+
+.accordion .submenu li a {
+  display: block;
+  color: #d9d9d9;
+  padding: 12px;
+  padding-left: 42px;
+}
+
+.accordion .submenu li a:hover {
+  background-color: #b63b4d;
+  color: #fff;
+}

@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+@import url('http://at.alicdn.com/t/font_950361_ler4e80sjmh.css');
+
+
+body {
+    background-color: rgb(45, 44, 65)
+}
+
+.accordion {
+    width: 100%;
+    max-width: 360px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 4px;
+
+    >li {
+        .link {
+            cursor: pointer;
+            padding: 15px 15px 15px 15px;
+            color: #4D4D4D;
+            font-size: 14px;
+            font-weight: 700;
+            border-bottom: 1px solid #CCC;
+            position: relative;
+            i{
+                color: #595959;
+                font-size: 18px;
+                &.icon-guanli{
+                    margin-right: 12px;
+                }
+                &.icon-xiala-{
+                    position: absolute;
+                    right: 15px;
+                    transition: transform 0.8s;
+                }
+            }
+            &.open{
+                color: #b63b4d;
+                i{
+                    color: #b63b4d;
+                }
+                .icon-xiala-{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &:last-child .link {
+            border-bottom: none;
+        }
+    }
+
+    .submenu {
+        display: none;
+        background: #444359;
+        font-size: 14px;
+        li{
+            border-bottom: 1px solid #4b4a5e;
+            a{
+                display: block;
+                color: #d9d9d9;
+                padding: 12px;
+                padding-left: 42px;
+                &:hover{
+                    background-color: #b63b4d;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

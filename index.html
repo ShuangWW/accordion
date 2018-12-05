@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Html5 accordion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+</head>
+
+<body>
+    <ul id="accordion" class="accordion">
+        <li>
+            <div class="link">
+                <i class="iconfont icon-guanli"></i>
+                菜单一
+                <i class="iconfont icon-xiala-"></i>
+            </div>
+            <ul class="submenu">
+                <li>
+                    <a href="#">菜单1-1</a>
+                </li>
+                <li>
+                    <a href="#">菜单1-2</a>
+                </li>
+                <li>
+                    <a href="#">菜单1-3</a>
+                </li>
+                <li>
+                    <a href="#">菜单1-4</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="link">
+                <i class="iconfont icon-guanli"></i>
+                菜单二
+                <i class="iconfont icon-xiala-"></i>
+            </div>
+            <ul class="submenu">
+                <li>
+                    <a href="#">菜单2-1</a>
+                </li>
+                <li>
+                    <a href="#">菜单2-2</a>
+                </li>
+                <li>
+                    <a href="#">菜单2-3</a>
+                </li>
+                <li>
+                    <a href="#">菜单2-4</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="link">
+                <i class="iconfont icon-guanli"></i>
+                菜单三
+                <i class="iconfont icon-xiala-"></i>
+            </div>
+            <ul class="submenu">
+                <li>
+                    <a href="#">菜单3-1</a>
+                </li>
+                <li>
+                    <a href="#">菜单3-2</a>
+                </li>
+                <li>
+                    <a href="#">菜单3-3</a>
+                </li>
+                <li>
+                    <a href="#">菜单3-4</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="link">
+                <i class="iconfont icon-guanli"></i>
+                菜单四
+                <i class="iconfont icon-xiala-"></i>
+            </div>
+            <ul class="submenu">
+                <li>
+                    <a href="#">菜单4-1</a>
+                </li>
+                <li>
+                    <a href="#">菜单4-2</a>
+                </li>
+                <li>
+                    <a href="#">菜单4-3</a>
+                </li>
+                <li>
+                    <a href="#">菜单4-4</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        // 事件委托机制：利用事件冒泡，只指定一个事件处理程序就可以管理某一类型的所有事件
+        $('#accordion').on('click','.link',function(){
+            $(this).next().slideToggle();
+            $(this).parent().siblings().children('.open').next().slideToggle();
+            $(this).parent().siblings().children('.link').removeClass('open')
+            $(this).toggleClass('open')
+        })
+    })
+</script>
+
+</html>
